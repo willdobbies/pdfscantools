@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdfscantools"
+version = "0.2.0"
+authors = [
+    {name="bobo"}
+]
+description = "Collection of scripts to help manage scanned pdf docs"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pymupdf",
+    "pillow",
+    "send2trash",
+]
+
+[project.scripts]
+pdfscantools-inject= "pdfscantools.inject:main"
+pdfscantools-dump= "pdfscantools.dump:main"
